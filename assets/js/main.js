@@ -53,5 +53,19 @@ app.on('window-all-closed', function () {
 const mainMenuTemplate = [
   {
     label: "File"
+    subMenu: [
+      {
+        label: "Create an item"
+      }
+      {
+        label: "Clear Items"
+      }
+      {
+        label: "Quit"
+        click() {
+          app.quit
+        }
+      }
+    ]
   }
 ]
