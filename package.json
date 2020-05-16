@@ -2,7 +2,7 @@
   "name": "slpod",
   "version": "1.0.0",
   "description": "A minimal Electron application",
-  "main": "main.js",
+  "main": "assets/js/main.js",
   "scripts": {
     "start": "electron ."
   },
