@@ -7,10 +7,13 @@
 
 // Where all the js front end code goes
 
-
-button.addEventListener('dbclick', removeItem);
-
-function removeItem() {
-  alert("HelloWorld");
-}
+document.onkeydown = function(e) {    
+  switch (e.keyCode) {        
+    case 65:            
+    document.getElementById('A').play();            
+    break;        
+    default:            
+    console.log("Key is not found!");    
+  }
+};
 
