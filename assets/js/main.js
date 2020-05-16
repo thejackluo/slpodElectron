@@ -9,12 +9,14 @@ function createWindow () {
     width: 800,
     height: 600,
     webPreferences: {
-      preload: path.join(__dirname, 'assets/js/preload.js')
+      nodeIntegration: true,
+      preload: path.join(__dirname, 'assets/js/preload.js'),
     }
   });
 
   // and load the index.html of the app.
   mainWindow.loadFile('index.html');
+  
 
   // Open the DevTools.
   // mainWindow.webContents.openDevTools()
@@ -24,7 +26,7 @@ function createWindow () {
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
 
   app.on('activate', function () {
     // On macOS it's common to re-create a window in the app when the
@@ -35,8 +37,6 @@ app.whenReady().then(() => {
 
 
 app.on('ready', function() {
-  
-  
   const mainMenu = Menu.buildFromTemplate(mainMenuTemplate);
   Menu.setApplicationMenu(mainMenu);
 });
@@ -51,29 +51,25 @@ app.on('window-all-closed', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-
-
 const mainMenuTemplate = [
-  
   {
     label: "File",
-    subMenu:[
+    submenu:[
       {
         label: "Create an item"
       },
-
       {
         label: "Clear Items"
       },
-
       {
-        label: "Quit",
-        accelerator: process.platform == "darwin" ? "Command+Q" : "Crtl+Q",
+        label: "Quit App",
+        accelerator: process.platform == "darwin" ? "Command+Q" : "Ctrl+Q",
         click() {
-          app.quit
+          app.quit();
         }
       }
     ]
   }
-
 ]
+
+
