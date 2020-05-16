@@ -1,6 +1,10 @@
 // Modules to control application life and create native browser window
-const {app, BrowserWindow, Menu} = require('electron')
-const path = require('path')
+const electron = require('electron');
+const url = require('url');
+const path = require('path');
+
+const {app, BrowserWindow, Menu} = electron;
+
 
 function createWindow () {
   // Create the browser window.
@@ -51,21 +55,26 @@ app.on('window-all-closed', function () {
 
 
 const mainMenuTemplate = [
+  
   {
-    label: "File"
-    subMenu: [
+    label: "File",
+    subMenu:[
       {
         label: "Create an item"
-      }
+      },
+
       {
         label: "Clear Items"
-      }
+      },
+
       {
-        label: "Quit"
+        label: "Quit",
+        accelerator: process.platform == "darwin" ? "Command+Q" : "Crtl+Q",
         click() {
           app.quit
         }
       }
     ]
   }
+
 ]
