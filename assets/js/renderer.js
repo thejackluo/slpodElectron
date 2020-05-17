@@ -8,9 +8,3 @@
 // Where all the js front end code goes
 
 
-button.addEventListener('dbclick', removeItem);
-
-function removeItem() {
-  alert("HelloWorld");
-}
-
