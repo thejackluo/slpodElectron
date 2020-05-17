@@ -1,0 +1,26 @@
+.text{
+  font-family: inheritlato;
+  padding: 20px;
+  font-size: 40px;
+  font-weight: bold;
+}
+.text2{
+  font-family: inheritlato;
+  padding: 20px;
+  font-size: 20px;
+}
+
+.button {
+  position: relative;
+  border: outset;
+  color: white;
+  padding: 20px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline;
+  font-size: 20px;
+  margin: 20px 10px;
+  cursor: pointer;
+}
+
+.button1 {background-color: #4CAF50;}
