@@ -5,8 +5,8 @@
     <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
     <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <link rel="stylesheet" type="text/css" src="assets/css/main.css">
-    <link rel="stylesheet" type="text/css" src="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
     <title>Add Window</title>
   </head>
   <body>
@@ -19,20 +19,6 @@
       </div>
       <button type="submit">Add Item</button>
     </form>
-
-    <!-- <script>
-      const electron = require('electron');
-      const {ipcRenderer} = electron;
-
-      const form = document.querySelector("form");
-      form.addEventListener('submit', submitForm);
-
-      function submitForm(e) {
-        e.preventDefault();
-        console.log(124);
-      }
-    </script> -->
-
 
     <!-- You can also require other files to run in this process -->
     <script src="assets/js/jquery-3.5.1.min.js"></script>
