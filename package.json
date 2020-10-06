@@ -10,6 +10,6 @@
   "author": "Jack and Nishio",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^8.3.0"
+    "electron": "^8.5.2"
   }
 }
